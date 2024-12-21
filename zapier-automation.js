@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const zapierWebhookUrl = "";
+const zapierWebhookUrl =
+  "https://hooks.zapier.com/hooks/catch/21085157/28h65n2/";
 
 // Define the function
 async function sendTopRatedToZapier(payload) {
