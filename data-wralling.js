@@ -69,16 +69,16 @@ export const getData = async (data) => {
     "", // Last Modified Date & TIme
   ];
 
-  // if (status === "READY") {
-  //   const payload = {
-  //     agencyName: data?.agencies?.name ?? "",
-  //     freelancerName: data?.shortName ?? "",
-  //     upworkUrl: data?.portrait ?? "",
-  //     status: "READY",
-  //   };
+  if (status === "READY") {
+    const payload = {
+      agencyName: data?.agencies?.name ?? "",
+      freelancerName: data?.shortName ?? "",
+      upworkUrl: data?.portrait ?? "",
+      status: "READY",
+    };
 
-  //   await sendTopRatedToZapier(payload);
-  // }
+    await sendTopRatedToZapier(payload);
+  }
 
   return items;
 };
