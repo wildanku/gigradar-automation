@@ -1,6 +1,6 @@
 import moment from "moment";
-import getSeniorityLevel from "./decission-making/seniority-level.js";
-import findBusinessSolution from "./decission-making/business-solution.js";
+import getSeniorityLevel from "./decission-maker/seniority-level.js";
+import findBusinessSolution from "./decission-maker/business-solution.js";
 import sendTopRatedToZapier from "./zapier-automation.js";
 
 export const getData = async (data) => {
@@ -71,7 +71,7 @@ export const getData = async (data) => {
 
   if (status === "READY") {
     const payload = {
-      agencyName: data?.agencies?.name ?? "",
+      agencyName: data?.agencies?.[0]?.name ?? "",
       freelancerName: data?.shortName ?? "",
       upworkUrl: data?.portrait ?? "",
       status: "READY",
